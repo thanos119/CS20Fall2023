@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Skillbuilders"/>
+	<classpathentry kind="src" path="EX6-MathTutor"/>
+	<classpathentry kind="src" path="EX9-GuessingGame"/>
+	<classpathentry kind="src" path="EX11-QuadraticEquations"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -22,20 +22,17 @@ public class Change
 		Scanner scanner = new Scanner(System.in);
         
 		// Asking the user to input an amount less than $1.00
-		
         System.out.print("Enter an amount less than $1.00: ");
         double amount = scanner.nextDouble();
         
-        // If the user types an amount more than $1.00 than it'll display a message letting the user know it must be below than $1.00
-        
+        // If the user types an amount more than $1.00 than it'll display a message letting the user know it must be below than $1.00  
         if (amount >= 1.00) {
             System.out.println("Amount must be less than $1.00");
             return;
         }
         
         // Setting the amount for each coin (quarters, dimes, nickels, pennies), so the program knows that coins to display for the specific amount inputed.
-        
-        int cents = (int) (amount * 100); // Convert dollars to cents
+        int cents = (int) (amount * 100); 
         
         int quarters = cents / 25;
         cents %= 25;
@@ -48,8 +45,7 @@ public class Change
         
         int pennies = cents;
         
-        // Finally, the once the program is finished selecting the coins for the specific amount inputed, it'll display on screen letting know the user what coins they need.
-        
+        // Finally, the once the program is finished selecting the coins for the specific amount inputed, it'll display on screen letting know the user what coins they need. 
         System.out.println("Minimum number of coins:");
         System.out.println("Quarters: " + quarters);
         System.out.println("Dimes: " + dimes);

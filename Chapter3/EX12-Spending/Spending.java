@@ -1,8 +1,9 @@
 /*
 
-Program: Spending.java          Last Date of this Revision: September 27, 2023
+Program: Spending.java          Last Date of this Revision: September 29, 2023
 
-Purpose: An application collects orders, calculates the amount + tax, prompts it to the user and as well as calculating change.
+Purpose: An application the collects the spends of the user and calculating the total to percentages showing the 
+user how much she spend for each category. 
 
 Author: Youssef Mohammed, 
 School: CHHS
@@ -14,47 +15,49 @@ import java.util.Scanner;
 
 public class Spending 
 {
+	
     public static void main(String[] args) 
     {
     	
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Time Analysis for Your Java Project");
-        System.out.println("===================================");
+        // Making the title of the program.
+        System.out.println("Spending Analysis for Last Month");
+        System.out.println("=================================");
 
-        // Prompt the user for time spent on different phases
-        System.out.print("Time spent on Design (in hours): ");
-        double designTime = scanner.nextDouble();
+        // Prompting the user for their spends in different categories (food, clothing, entertainment, and rent.
+        System.out.print("Amount spent on Food (in USD): ");
+        double foodSpending = scanner.nextDouble();
 
-        System.out.print("Time spent on Coding (in hours): ");
-        double codingTime = scanner.nextDouble();
+        System.out.print("Amount spent on Clothing (in USD): ");
+        double clothingSpending = scanner.nextDouble();
 
-        System.out.print("Time spent on Debugging (in hours): ");
-        double debuggingTime = scanner.nextDouble();
+        System.out.print("Amount spent on Entertainment (in USD): ");
+        double entertainmentSpending = scanner.nextDouble();
 
-        System.out.print("Time spent on Testing (in hours): ");
-        double testingTime = scanner.nextDouble();
+        System.out.print("Amount spent on Rent (in USD): ");
+        double rentSpending = scanner.nextDouble();
 
-        // Calculate the total time
-        double totalTime = designTime + codingTime + debuggingTime + testingTime;
+        // Calculating the total spending of the user.
+        double totalSpending = foodSpending + clothingSpending + entertainmentSpending + rentSpending;
 
-        // Calculate the percentages
-        double designPercentage = (designTime / totalTime) * 100;
-        double codingPercentage = (codingTime / totalTime) * 100;
-        double debuggingPercentage = (debuggingTime / totalTime) * 100;
-        double testingPercentage = (testingTime / totalTime) * 100;
+        // Calculating the total to percentages.
+        double foodPercentage = (foodSpending / totalSpending) * 100;
+        double clothingPercentage = (clothingSpending / totalSpending) * 100;
+        double entertainmentPercentage = (entertainmentSpending / totalSpending) * 100;
+        double rentPercentage = (rentSpending / totalSpending) * 100;
 
-        // Display the results in a table
-        System.out.println("\nTime Analysis Report");
-        System.out.println("====================");
-        System.out.println("Phase          Time (hours)      Percentage");
-        System.out.println("------------------------------------------");
-        System.out.printf("Design         %.2f               %.2f%%\n", designTime, designPercentage);
-        System.out.printf("Coding         %.2f               %.2f%%\n", codingTime, codingPercentage);
-        System.out.printf("Debugging      %.2f               %.2f%%\n", debuggingTime, debuggingPercentage);
-        System.out.printf("Testing        %.2f               %.2f%%\n", testingTime, testingPercentage);
-        System.out.println("------------------------------------------");
-        System.out.printf("Total          %.2f               100.00%%\n", totalTime);
+        // Displaying the results in a table for the user to see.
+        System.out.println("\nSpending Analysis Report");
+        System.out.println("========================");
+        System.out.println("Category        Amount (USD)      Percentage");
+        System.out.println("--------------------------------------------");
+        System.out.printf("Food            %.2f               %.2f%%\n", foodSpending, foodPercentage);
+        System.out.printf("Clothing        %.2f               %.2f%%\n", clothingSpending, clothingPercentage);
+        System.out.printf("Entertainment   %.2f               %.2f%%\n", entertainmentSpending, entertainmentPercentage);
+        System.out.printf("Rent            %.2f               %.2f%%\n", rentSpending, rentPercentage);
+        System.out.println("--------------------------------------------");
+        System.out.printf("Total           %.2f               100.00%%\n", totalSpending);
 
         scanner.close();
     }
@@ -62,14 +65,22 @@ public class Spending
 
 /* Screen Dump
 
-Enter the number of Burgers: 2
-Enter the number of Fries: 1
-Enter the number of Sodas: 1
-Total before tax: $5.46
-Tax (6.5%): $0.35
-Final cost: $5.81
-Enter the amount tendered: $6.00
-Change due: $0.19
+Spending Analysis for Last Month
+=================================
+Amount spent on Food (in USD): 20
+Amount spent on Clothing (in USD): 30
+Amount spent on Entertainment (in USD): 40
+Amount spent on Rent (in USD): 20
+
+Spending Analysis Report
+========================
+Category        Amount (USD)      Percentage
+--------------------------------------------
+Food            20.00               18.18%
+Clothing        30.00               27.27%
+Entertainment   40.00               36.36%
+Rent            20.00               18.18%
+--------------------------------------------
+Total           110.00               100.00%
  
  */
-

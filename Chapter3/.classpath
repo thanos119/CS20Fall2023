@@ -8,5 +8,6 @@
 	<classpathentry kind="src" path="EX5-Change"/>
 	<classpathentry kind="src" path="EX10-Order"/>
 	<classpathentry kind="src" path="EX12-Spending"/>
+	<classpathentry kind="src" path="Skillbuilders"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

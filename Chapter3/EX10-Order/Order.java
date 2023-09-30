@@ -20,12 +20,12 @@ public class Order
     	
         Scanner scanner = new Scanner(System.in);
 
-        // Prices
+        // The value of the prices on the menu.
         double burgerPrice = 1.69;
         double friesPrice = 1.09;
         double sodaPrice = 0.99;
 
-        // Input: Number of items ordered
+        // Asking the user for their order and collecting the number of items ordered.
         System.out.print("Enter the number of Burgers: ");
         int numBurgers = scanner.nextInt();
 
@@ -35,29 +35,29 @@ public class Order
         System.out.print("Enter the number of Sodas: ");
         int numSodas = scanner.nextInt();
 
-        // Calculate total cost before tax
+        // Calculating total cost before tax.
         double subtotal = (numBurgers * burgerPrice) + (numFries * friesPrice) + (numSodas * sodaPrice);
 
-        // Calculate tax (6.5%)
+        // Calculating with the tax (6.5%).
         double taxRate = 0.065;
-        double tax = subtotal * taxRate;
+        double tax = subtotal + taxRate;
 
-        // Calculate final cost
+        // Calculating the  final cost of the order.
         double totalCost = subtotal + tax;
 
-        // Output: Display the total, tax, and final cost
+        // Displaying the total, tax, and final cost.
         System.out.println("Total before tax: $" + String.format("%.2f", subtotal));
         System.out.println("Tax (6.5%): $" + String.format("%.2f", tax));
         System.out.println("Final cost: $" + String.format("%.2f", totalCost));
 
-        // Part b) Input: Amount tendered
+        // Part b) Receiving the amount tendered.
         System.out.print("Enter the amount tendered: $");
         double amountTendered = scanner.nextDouble();
 
-        // Calculate change due
+        // Calculating change due for the employee.
         double changeDue = amountTendered - totalCost;
 
-        // Output: Display the change due
+        // Displaying the change due to the employee so they can give the change to the user.
         System.out.println("Change due: $" + String.format("%.2f", changeDue));
 
         scanner.close();
