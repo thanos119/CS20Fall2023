@@ -21,19 +21,20 @@ public class GroupAssignment
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter your full name: ");
-        String fullName = scanner.nextLine().trim(); // Trim any leading/trailing spaces
+        String fullName = scanner.nextLine().trim(); // Trim any leading/trailing spaces.
 
-        // Extract the last name by splitting the full name
+        // Extracts the last name by splitting the full name.
         String[] nameParts = fullName.split(" ");
         String lastName = "";
         if (nameParts.length > 0) {
             lastName = nameParts[nameParts.length - 1];
         }
 
+        // This code sets the "firstLetterOfLastName" variable to the first character of the lastName if "lastName" is not empty. If "lastName" is empty, it sets "firstLetterOfLastName" to a space character. The groupNumber variable is declared. 
         char firstLetterOfLastName = lastName.isEmpty() ? ' ' : lastName.charAt(0);
         int groupNumber;
 
-        // Assign the group based on the first letter of the last name
+        // Assigns the group based on the first letter of the last name. Determined by conditions.
         if (firstLetterOfLastName >= 'A' && firstLetterOfLastName <= 'I') {
             groupNumber = 1;
         } else if (firstLetterOfLastName >= 'J' && firstLetterOfLastName <= 'S') {
@@ -41,9 +42,10 @@ public class GroupAssignment
         } else if (firstLetterOfLastName >= 'T' && firstLetterOfLastName <= 'Z') {
             groupNumber = 3;
         } else {
-            groupNumber = 0; // Invalid last name
+            groupNumber = 0; // If it's an invalid last name.
         }
 
+        // Tells the user if the letter is valid or not. If it is valid, it'll introduce the user to the assignment.
         if (groupNumber == 0) {
             System.out.println("Invalid last name. Please enter a valid last name.");
         } else {

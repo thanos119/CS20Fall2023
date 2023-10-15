@@ -22,21 +22,21 @@ public class NumbersSum
     	
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt the user for a number
+        // Prompt the user for a number.
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
-        // Initialize the sum to 0
+        // Initializing the sum to 0.
         int sum = 0;
 
-        // Display the numbers from 1 to the entered number and calculate the sum
+        // This'll display the numbers from 1 to the entered number by the user and calculate the sum.
         System.out.println("Numbers from 1 to " + number + ":");
-        for (int i = 1; i <= number; i++) {
-            System.out.println(i);
+        for (int i = 1; i <= number; i++) {  //The loop continues as long as "i" is less than or equal to the value of number. It iterates 
+            System.out.println(i); // from 1 up to and including the value of "number".
             sum += i;
         }
 
-        // Display the sum
+        // Once finished it'll display the results to the user.
         System.out.println("Sum of numbers from 1 to " + number + " is: " + sum);
 
         scanner.close();

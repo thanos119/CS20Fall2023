@@ -21,14 +21,14 @@ public class PrimeNumber
     	
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt the user for a number
+        // Prompt the user for a number.
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
-        // Check if the number is prime
+        // Determining whether the number is prime or not. It calculates if the number can only be divided by 1 and itself without any remainder.
         boolean isPrime = isPrimeNumber(number);
 
-        // Display the result
+        // Displays the result if the following number is prime or not.
         if (isPrime) {
             System.out.println(number + " is a prime number.");
         } else {
@@ -38,19 +38,19 @@ public class PrimeNumber
         scanner.close();
     }
 
-    // Function to check if a number is prime
-    public static boolean isPrimeNumber(int n) {
+    // Function and conditions to check if a number is prime. Basically double checking.
+    public static boolean isPrimeNumber(int n) { //Grabbing the exact value of "isPrimeNumber" either "true" or "false" from the same class.
         if (n <= 1) {
-            return false; // Numbers less than or equal to 1 are not prime
+            return false; // Numbers less than or equal to 1 are not prime (false).
         }
         if (n <= 3) {
-            return true; // 2 and 3 are prime numbers
+            return true; // 2 and 3 are prime numbers (true).
         }
         if (n % 2 == 0 || n % 3 == 0) {
-            return false; // Numbers divisible by 2 or 3 are not prime
+            return false; // Numbers divisible by 2 or 3 are not prime (false).
         }
 
-        // Check for prime using 6k +/- 1 rule
+        // Checks for prime using 6k +/- 1 rule.
         for (int i = 5; i * i <= n; i += 6) {
             if (n % i == 0 || n % (i + 2) == 0) {
                 return false;

@@ -23,19 +23,19 @@ public class OddSum
     	
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt the user for a number
+        // Prompt the user for a number.
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
-        // Initialize the sum to 0
+        // Initializing the sum to 0.
         int sum = 0;
 
-        // Calculate the sum of odd numbers from 1 to the entered number
-        for (int i = 1; i <= number; i += 2) {
+        // This will calculate the sum of odd numbers from 1 to the entered number by the user.
+        for (int i = 1; i <= number; i += 2) { //This is a accumulator that keeps a running total of the odd numbers.
             sum += i;
         }
 
-        // Display the sum
+        // It'll display the sum letting the user know what it is.
         System.out.println("Sum of odd numbers from 1 to " + number + " is: " + sum);
 
         scanner.close();

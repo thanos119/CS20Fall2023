@@ -23,18 +23,18 @@ public class GuessingGame
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        // Step 1: Generate a secret number between 1 and 20
+        // First this will generate a random secret number which is 1-20.
         int secretNumber = random.nextInt(20) + 1;
 
-        // Step 2: Prompt the player for a number between 1 and 20
+        // This will prompt the user to input a value (their guess).
         System.out.print("Guess the secret number (between 1 and 20): ");
         int playerNumber = scanner.nextInt();
 
-        // Step 3: Compare the player's number to the secret number
+        // After receiving both values, it'll compare the two values.
         System.out.println("Secret Number: " + secretNumber);
         System.out.println("Your Guess: " + playerNumber);
 
-        // Step 4 and 5: Check if the player's number matches the secret number
+        // This checks if the player's number matches with the secret number.
         if (playerNumber == secretNumber) {
             System.out.println("You Won!");
         } else {
