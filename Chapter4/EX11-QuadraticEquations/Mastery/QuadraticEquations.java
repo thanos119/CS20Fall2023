@@ -9,6 +9,7 @@ School: CHHS
 Course: Computer Programming 20
 
 */
+package Mastery;
 
 import java.util.Scanner;
 
